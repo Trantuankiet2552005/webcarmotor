@@ -131,7 +131,9 @@
       <!-- Nội dung chính -->
       <div class="app-content">
         <h1>Giả lập Điện thoại</h1>
-        <p>Nội dung ứng dụng ở đây.</p>
+        <p>Trần Tuấn Kiệt 23126021</p>
+        <p>Trương Phước Khánh 23126018</p>
+        <p>Lê Quốc Khải 23126017</p>
       </div>
 
       <!-- Overlay Incoming Call -->
@@ -161,11 +163,19 @@
       incomingCall.style.display = 'block';
     });
 
-    // Chấp nhận cuộc gọi
-    acceptBtn.addEventListener('click', () => {
-      incomingCall.querySelector('p').textContent = 'Đã trả lời';
-      setTimeout(() => { incomingCall.style.display = 'none'; }, 1500);
-    });
+// Chấp nhận cuộc gọi
+acceptBtn.addEventListener('click', () => {
+  // Cập nhật trạng thái cuộc gọi
+  incomingCall.querySelector('p').textContent = 'Đã trả lời';
+
+  // Phát âm thanh
+  const audio = new Audio('../images/mp3phone.mp3');
+  audio.play();
+
+  // Ẩn thông báo sau 1.5 giây
+
+});
+
 
     // Từ chối cuộc gọi
     rejectBtn.addEventListener('click', () => {
